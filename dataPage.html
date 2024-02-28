@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Health Monitor</title>
+    <!--<link rel="stylesheet" href="style.css">-->
+    <style>
+        html {
+            color: black;
+            text-align: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+            overflow: hidden;
+            background-image: url('public/asserts/e2uvoS.gif');
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100%; 
+        }
+
+       
+
+        .main{
+            height: 100%;
+        
+        }
+        .splitbox{
+            display:grid;
+            height: 150vh;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto;
+        }
+        .content{
+            width:100%;
+            height: 100%;
+            bottom: 150px;
+            right: 480px;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            /* animation: animatePngItem_5350649 5s linear infinite; */
+        }
+        .content1{
+            width:100%;
+            height: 100%;
+            bottom: 150px;
+            left: 10px;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            /* animation: animatePngItem_5350649 5s linear infinite; */
+        }
+        .content2{
+            width:100%;
+            height: 100%;
+            bottom: 150px;
+            left: 500px;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            /* animation: animatePngItem_5350649 5s linear infinite; */
+        }
+        .detail{
+            background: blue;
+            color: black;
+            width: 10%;
+            height: 60px;
+            display: inline-block;
+            position: absolute;
+            bottom: 150px;
+            left: 560px;
+        }
+
+         @keyframes animatePngItem_5350649 {
+            100% {
+                filter: hue-rotate(420deg);
+            }
+        } 
+
+        .detail:hover{
+            background: slateblue;
+        }
+        .graph{
+            background: blue;
+            color: black;
+            width: 10%;
+            height: 60px;
+            display: inline-block;
+            position: absolute;
+            bottom: 150px;
+            right: 540px;
+        }
+        .graph:hover{
+            background: slateblue;
+        }
+        
+       
+        
+    </style>
+</head>
+<body>
+    <section>
+    <div class="main">
+       <div style="color: red;font-size: 70px;">HEALTH MONITOR</div> 
+       <div class="splitbox">
+           <div class="c1">
+            <image src="public/asserts/PngItem_5350649.png"  alt="png3" style="width: 80%;animation: animatePngItem_5350649 5s linear infinite;"></image>
+            <div class="content">
+                <h1 style="font-size: 30px;">Heart Rate</h1>
+                <h2 style="color: red;height: 20px;font-size: 80px;" id="hr-value">123</h2>
+            </div>
+           </div>
+
+           <div class="c2">
+            <image src="public/asserts/PngItem_5350649.png"  alt="png3" style="width: 80%;animation: animatePngItem_5350649 5s linear infinite;"></image>
+            <div class="content1">
+                <h1 style="font-size: 30px;">Oxygen Level</h1>
+                <h2 style="color: red;height: 20px;font-size: 80px;" id="oxy-value">123</h2>
+            </div>
+           </div>
+
+           <div class="c3">
+            <image src="public/asserts/PngItem_5350649.png"  alt="png3" style="width: 80%;animation: animatePngItem_5350649 5s linear infinite;"></image>
+            <div class="content2">
+                <h1 style="font-size: 30px;">BP Level</h1>
+                <h2 style="color: red;height: 20px;font-size: 80px;"  id="bp-value">123</h2>
+            </div>
+           </div>
+           <div class="c4">
+            c4
+            
+           </div>
+           <button class="detail" style="color: white; font-size: 25px;"><b>Details</b></button>
+           <button class="graph" style="color: white; font-size: 25px;"><b>Graph</b></button>
+        </div>
+        </div>
+        
+       </div>
+    </div>
+    <script>
+        const hr = document.getElementById('hr-value');
+        hr.innerHTML = "80"
+        const oxy = document.getElementById('oxy-value');
+        oxy.innerHTML = "95"
+        const bp = document.getElementById('bp-value');
+        bp.innerHTML = "110"
+    </script>
+    </section>
+</body>
+</html>
